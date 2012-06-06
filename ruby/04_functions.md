@@ -1,6 +1,6 @@
 !SLIDE
 # Ruby Funktionen
-
+<!SLIDE>
 # Expression values
 
 In Ruby gibt jeder Ausdruck einen Wert zurück
@@ -13,11 +13,14 @@ In Ruby gibt jeder Ausdruck einen Wert zurück
     >> "zero" if (2+2).zero?
     => nil
 
+<!SLIDE>
+
 # Funktionswerte
 
 Der Wert einer Funktion ist der Wert des letzten Ausdrucks
 (es seid den ein Wert wird an `return` übergeben)
 
+<!SLIDE>
 # Parameter und Rückgabewerte
 
     @@@ ruby
@@ -30,7 +33,7 @@ Der Wert einer Funktion ist der Wert des letzten Ausdrucks
 
 .notes the keyword `return` is available, but usually unnecessary
 
-
+<!SLIDE>
 # Splat Arguments
 repräsentieren ein Array von Argumenten
     @@@ ruby
@@ -45,6 +48,7 @@ repräsentieren ein Array von Argumenten
     Hello, Bob!
     Hello, Charlie!
 
+<!SLIDE>
 # Standardwerte
 
     @@@ ruby
@@ -58,7 +62,7 @@ repräsentieren ein Array von Argumenten
     >> eat "arugula"
     Yum, arugula!
 
-
+<!SLIDE small>
 # "options hash" Pattern
 
 Um variable oder benannte Parameter zu übergeben wir ein einem Argument ein Hash übergeben

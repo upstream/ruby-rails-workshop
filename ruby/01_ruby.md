@@ -51,8 +51,8 @@
 # Bsp: Least Suprise
 * `1 + 1 # => 2`
 * `[1, 2] + [2, 3] # => [1, 2, 3, 4]`
-* `$ "Hello " + "World" # => ?`
-* `$ Time.now + 60 # => ?`
+* `"Hello " + "World" # => ?`
+* `Time.now + 60 # => ?`
 
 
 !SLIDE left

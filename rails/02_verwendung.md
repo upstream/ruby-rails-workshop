@@ -18,10 +18,10 @@ Hints: (rails new, rails server)
 `rails new .  -T -d mysql`
 
 !SLIDE
-# Scafolding
+# Scaffolding
 * erstellt eine Resource (Model) mit passenden Tabellen, Views, Controllern und REST Routen 
 
-* `rails g resource attribute:type ...`
+* `rails g scaffold attribute:type ...`
   * erstellt Datenbank Migration
   * erstellt Routen
   * erstellt Models
@@ -64,13 +64,16 @@ Hints: (rails new, rails server)
   * CRUD Actions
     * index
     * new
-    *
+    * edit
+    * update
+    * create
+    * destroy
     
 !SLIDE
 # Übung
   * Erstelle ein neue resource "BeamTarget" mit den attributen "density" & "volume"
   * Im root Verzeichniss soll die Liste der Beam Targets zu sehen sein.
-  * Test ob es funtioniert
+  * Test ob es funktioniert
 
 !SLIDE
 # Lösung
@@ -79,8 +82,17 @@ Hints: (rails new, rails server)
 
 .notes walk through the code
 
-!SLIDE  
+<!SLIDE small>
 # URL Helper
-
+  * methoden die auf Grundlage der Routen urls zurückgeben
+    * signular_path(id) - show
+    * signular_path POST- create
+    * new_singular_path - new
+    * edit_singular_path(id) - update
+    * signular_path(id) DELETE - destroy
+    * plural_path - index
+  * `rake routes` zeigt die Routen der App
 !SLIDE
 # Forms
+  * form_for
+  

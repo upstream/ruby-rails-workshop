@@ -1,4 +1,5 @@
-# Basis Typen
+<!SLIDE small>
+# Basis Typen 
 * Nummern
   * `42` (Fixnum)
   * `3.14159` (Float)
@@ -13,6 +14,7 @@
   
 .notes :symbol Alias für eine Speicheraddresse
 
+<!SLIDE small>
 # Basis Typen (cont.)
 
 * Regular Expressions

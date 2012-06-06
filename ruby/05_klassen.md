@@ -45,7 +45,7 @@
     end
 
     alice = Person.new
-    alice.age= 17
+    alice.age = 17
     alice.age #=> 17
 
     alice.@age #=> SyntaxError

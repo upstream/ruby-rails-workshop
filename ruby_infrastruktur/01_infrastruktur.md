@@ -25,19 +25,21 @@
 * `gem install foo` - lädt runter und installiert das "foo" gem von rubygems.org
 
 !SLIDE
-# rake
-* Ruby Make
-* gem das verwendet wird um verschiedenste Aufgaben zu automatisieren
-* Aufgaben werden in einer "Rakefile" mit Ruby programmiert
-* `rake -T` zeigt die verfügbaren Aufgaben
-
-!SLIDE
 # bundler
 
 * Dependency Manager für Ruby
 * gem Programm das Abhängigkeiten von gems in einer 'Gemfile' Datei verwaltet.
 * Bsp: `gem 'rails', '~> 3.2.1'`
 * installation mit `gem install bundler`
+* Abhängigkeiten installieren `bundle install`
+
+!SLIDE
+# rake
+* Ruby Make
+* gem das verwendet wird um verschiedenste Aufgaben zu automatisieren
+* Aufgaben werden in einer "Rakefile" mit Ruby programmiert
+* `rake -T` zeigt die verfügbaren Aufgaben
+
 
 !SLIDE
 # rvm 

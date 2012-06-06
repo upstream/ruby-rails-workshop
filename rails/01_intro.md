@@ -1,7 +1,7 @@
 !SLIDE center
 # Rails
 
-!SLIDE
+<!SLIDE small>
 # Vorstellung 
  * Framework für Webanwendungen (verhalf Ruby zum Durchbruch)
  * Ruby On Rails wurde von 37signals' David Heinemeier Hansson (DHH) erdacht

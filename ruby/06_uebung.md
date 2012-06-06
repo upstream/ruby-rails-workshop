@@ -16,4 +16,9 @@ Definiere eine Klasse `BeamTarget` dessen Instanzen mit einer Dichte (gramm/qcm)
         (@density * @volume).to_s + ' gramm'
       end
     end
+    
+
+<!SLIDE center>
+# Reference
+http://www.zenspider.com/Languages/Ruby/QuickRef.html
   
