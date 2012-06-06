@@ -45,6 +45,6 @@
 !SLIDE
 # Rails Komponenten
   * ActiveRecord : ORM
-  * ActionController: Beantworten von Request mit richtigen Views and Daten
+  * ActionController: Beantworten von Request mit richtigen Views and Daten (Routing)
   * ActionView: HTML Generieren
   * ActiveSupport: Hilfs und Support Funktionen 

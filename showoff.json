@@ -4,6 +4,7 @@
     {"section":"intro"},
     {"section":"ruby"},
     {"section":"ruby_infrastruktur"},
+    {"section":"rails"},
     {"section":"git"}
   ]
 }
