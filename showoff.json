@@ -1,0 +1,9 @@
+{
+  "name": "Test Driven Development mit Ruby",
+  "sections": [
+    {"section":"intro"},
+    {"section":"ruby"},
+    {"section":"ruby_infrastruktur"},
+    {"section":"git"}
+  ]
+}
