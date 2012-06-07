@@ -17,11 +17,11 @@ Hints: (rails new, rails server)
 # Lösung
 `rails new .  -T -d mysql`
 
-!SLIDE
+<!SLIDE small>
 # Scaffolding
 * erstellt eine Resource (Model) mit passenden Tabellen, Views, Controllern und REST Routen 
 
-* `rails g scaffold attribute:type ...`
+* `rails g scaffold name attribute:type ...`
   * erstellt Datenbank Migration
   * erstellt Routen
   * erstellt Models

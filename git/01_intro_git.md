@@ -28,4 +28,4 @@ distributed version control system
   * `git status` - geänderte/neue dateien anzeigen
   * `git diff filename` - diff der aktuellen Datei mit lokaler history
   * `git checkout branch` - in lokalen branch wechseln
-  * `git checkout .` - nicht commitete Änderunger löschen
+  * `git checkout .` - nicht commitete Änderungen löschen

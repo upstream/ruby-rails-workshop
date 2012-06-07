@@ -22,13 +22,13 @@
     end
     # => MyModule::Child
       
-!SLIDE
+<!SLIDE small>
 # Validierungen
   * Gültigkeitsprüfung beim schreiben in die DB oder bei `.valid?`
   * Bsp
-    * validates_presence_of
-    * validates_uniqness_of
-    * valdiates_format_of
+    * `validates_presence_of`
+    * `validates_uniqness_of`
+    * `valdiates_format_of`
   * weitere hier: http://api.rubyonrails.org/classes/ActiveModel/Validations/HelperMethods.html
   * fehlgeschlagene Validierungen setzen `.errors`
 
@@ -38,21 +38,28 @@ Füge beam_target eine Validierung für density != nil hinzu
 
 !SLIDE
 # Lösung
-  * validates_presence_of :density
+
+    @@@ ruby
+    class BeamTarget < ActiveRecord::Base
+      validates_presence_of :density
+      ...
+    end
 
 !SLIDE
 # Experimente in der Rails Console
   * irb mit Rails
   * `rails console`
 
+!SLIDE
 # DB CRUD
-  `.create(attribute: value)`
-  `.find(:id)`
-  `.destroy`
-  `.all`
-  `.update_attributes`
-  `.save`
-  
+  * `ModelClass.create(attribute: value)`
+  * `ModelClass.find(:id)`
+  * `model.destroy`
+  * `ModelClass.all`
+  * `model.update_attributes`
+  * `model.save`
+
+!SLIDE
 # Übung
   Erstelle/Lade/Ändere und Lösche BeamTargets mit `rails console`
 
@@ -86,12 +93,12 @@ kombinierbare Abfragebedingungen
       SELECT `beam_targets`.* FROM `beam_targets` WHERE (density < 2) AND (volume < 20)
   
 
-<!SLIDE>
+<!SLIDE small>
 # Dynamische Finder
   * Methoden die direkt nach Attributen filtern
   * Bsp.
-    * `find_by_density(20)`
-    * `find_all_by_volume_and_desity(20, 5)`
+    * `BeamTarget.find_by_density(20)`
+    * `BeamTarget.find_all_by_volume_and_desity(20, 5)`
   
 <!SLIDE smaller>
 # Ruby: Method missing
@@ -114,7 +121,13 @@ wenn eine Methode nicht bekannt ist wir erst `method_missing` aufgerufen bevor e
       end
     end
   
-# Übung 
+!SLIDE
+# Relationen
+* `has_many`
+* `belongs_to`
+* `has_one`
+* `has_and_belongs_to_many`
+
 
     
 
