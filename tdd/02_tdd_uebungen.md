@@ -113,7 +113,7 @@ Nur soweit implementieren wie nötig (= bis Tests grün).
     @@@ ruby
     class TestWithoutStubs < Test::Unit::TestCase
       def setup
-        @twitter = TwitterClient.new 'langalex', '***'
+        @twitter = TwitterClient.new 'freaklikeme', '***'
         @twitter.posts.each(&:destroy)
       end
 

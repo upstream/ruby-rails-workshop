@@ -8,6 +8,7 @@
     {"section":"git"},
     {"section":"rails_cont"},
     {"section":"ext_rails"},
-    {"section":"tdd"}
+    {"section":"tdd"},
+    {"section":"deployment"}
   ]
 }
