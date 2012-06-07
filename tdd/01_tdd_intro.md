@@ -12,7 +12,7 @@
 
 ## Warum TDD?
 
-.notes NEXT: weniger fehler, regressionen
+.notes NEXT: weniger fehler, regressionen 
 
 !SLIDE
 

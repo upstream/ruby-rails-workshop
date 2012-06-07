@@ -33,6 +33,7 @@
   * /app/models - Models
   * /app/controller - Controller
   * /app/views - Views
+  * /app/assets - Javascript/Stylesheets
 
 !SLIDE  
 # Struktur (cont)  
@@ -46,5 +47,5 @@
 # Rails Komponenten
   * ActiveRecord : ORM
   * ActionController: Beantworten von Request mit richtigen Views and Daten (Routing)
-  * ActionView: HTML Generieren
+  * ActionView: Die eigentlich Antwort (Response) generieren
   * ActiveSupport: Hilfs und Support Funktionen 

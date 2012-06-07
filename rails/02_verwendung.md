@@ -28,51 +28,12 @@ Hints: (rails new, rails server)
   * erstellt Erb Views
   * erstellt CRUD Controller
 
-.notes CRUD Create, Update, Delete, REST => Mapping der HTTP werben
+.notes CRUD Create, Update, Delete, REST => Darstellung von Resourcen via URLs und Anwendung der HTTP Verben um Aktionen anzugeben
 
-!SLIDE
-# Migration
-  * `rake db:create:all` Datenbank anlegen
-  * DB unabhängige Schemaänderungen
-  * up/down
-  * `rake db:migrate` für die DB anwenden
-  * Achtung! Abhägigkeiten vom Code vermeiden
-  
-!SLIDE smaller
-# Routen
-  * stehen in `routes.rb`
-  * Ordnet Requests Controllern und Actions zu
-  * `resources :products` CRUD resource mit HTTP Verben
-  * `match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase` bennante Route mit parameter (purchase)
-
-!SLIDE  
-# Models
-  * Persistenz und Business Logik
-  * `rake g model name attribute:typ`
-
-!SLIDE
-# Erb Views
-  * HTML + Ruby (Embedded Ruby)
-  * `<% %>` evaluiert ohne output
-  * `<%= %>` evaluiert und schreibt output
-  * CRUD views "new, edit, show, index"
-
-!SLIDE  
-# Controller
-  * `rails g controller name`
-  * public Methoden sind Actions
-  * CRUD Actions
-    * index
-    * new
-    * edit
-    * update
-    * create
-    * destroy
-    
 !SLIDE
 # Übung
   * Erstelle ein neue resource "BeamTarget" mit den attributen "density" & "volume"
-  * Im root Verzeichniss soll die Liste der Beam Targets zu sehen sein.
+  * Bonus: Im root Verzeichniss soll die Liste der Beam Targets zu sehen sein. (see routes.rb)
   * Test ob es funktioniert
 
 !SLIDE
@@ -82,17 +43,54 @@ Hints: (rails new, rails server)
 
 .notes walk through the code
 
-<!SLIDE small>
-# URL Helper
-  * methoden die auf Grundlage der Routen urls zurückgeben
-    * signular_path(id) - show
-    * signular_path POST- create
-    * new_singular_path - new
-    * edit_singular_path(id) - update
-    * signular_path(id) DELETE - destroy
-    * plural_path - index
-  * `rake routes` zeigt die Routen der App
 !SLIDE
-# Forms
-  * form_for
-  
+# Migration
+  * DB unabhängige Schemaänderungen
+  * in zwei Richtungen up & down
+  * `rake db:create:all` Datenbank anlegen  
+  * `rake db:migrate` um DB aufs neue Schema zu migrieren
+  * Achtung! Abhägigkeiten vom App Code in Migrations vermeiden
+
+.notes open db/migrations/???_create_beam_targets.rb
+
+!SLIDE  
+# Models
+  * Persistenz via ActiveRecord::Base
+  * Business Logik in der Model Datei
+  * `rake g model name attribute:type`
+
+.notes models/beam_target.rb öffnen als Beispiel
+
+<!SLIDE small>
+# Routen
+  * stehen in `routes.rb`
+  * Ordnet Requests Controllern und Actions zu
+  * `resources :products` CRUD ressource
+  * `match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase` bennante Route mit parameter (purchase_url)
+
+.notes config/routes.rb öffnen für weitere Beispiele
+
+!SLIDE  
+# Controller
+  * `rails g controller name`
+  * public Methoden sind Actions
+  * standard Actions
+    * index
+    * new
+    * edit
+    * update
+    * create
+    * destroy
+
+.notes öffne controller/beam_targets_controller.rb
+
+<!SLIDE small>
+# Views / ERB
+  * HTML + Ruby (Embedded Ruby)
+  * `<% @user.name %>` evaluiert ohne Output
+  * `<%= @user.name %>` evaluiert und stellt Output da
+  * CRUD views "new, edit, show, index"
+
+.notes öffne views/beam_targets/show.html.erb, NEXT: git
+
+

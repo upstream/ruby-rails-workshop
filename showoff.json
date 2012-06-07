@@ -5,6 +5,9 @@
     {"section":"ruby"},
     {"section":"ruby_infrastruktur"},
     {"section":"rails"},
-    {"section":"git"}
+    {"section":"git"},
+    {"section":"rails_cont"},
+    {"section":"ext_rails"},
+    {"section":"tdd"}
   ]
 }
