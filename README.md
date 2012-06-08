@@ -14,6 +14,8 @@ Thilo Utke 2012
   * Ruby Referenz - http://www.zenspider.com/Languages/Ruby/QuickRef.html
   * Api Dokumentation Rails - http://api.rubyonrails.org/
   * Ausführliche Guides zu Rails - http://guides.rubyonrails.org
+  
+  * Gem Verzeichniss - http://rubygems.org
   * Dokumentation RVM - http://rvm.io
   
   
