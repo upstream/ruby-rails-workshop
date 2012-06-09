@@ -21,9 +21,9 @@
   * auch kostenlos
   * DIY
 
+!SLIDE
 # passenger setup
-  * 
-.notes http://www.modrails.com/documentation/Users%20guide%20Apache.html#_configuring_phusion_passenger
+  http://www.modrails.com/documentation/Users%20guide%20Apache.html#_configuring_phusion_passenger
 
 !SLIDE
 # deployment schritte

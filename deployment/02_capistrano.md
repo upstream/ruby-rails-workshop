@@ -5,6 +5,15 @@ Framework das es erlaubt Tasks auf mehreren Systemen gleichzeitig auszuführen.
 .notes funktioniert wie rake
 
 !SLIDE
+# Funktionen
+  * Zugriff über ssh auf remote Servern
+  * verteilen der sourcen via SCP und/oder GIT/SVN...
+  * vorhalten meherer Versionen und Rollbacks
+  * Maintainence mode 
+  * rollenspezifische Task für Server
+  * Mehrere Enviroments (über Erweiterung)
+
+!SLIDE
 # capistano vorraussetzungen
  * zugangn uber SSH
  * Gleiches Passwort oder public key auf allen Servern
@@ -19,15 +28,6 @@ Framework das es erlaubt Tasks auf mehreren Systemen gleichzeitig auszuführen.
   * env spezifische config in `config/deploy/[env].rb`
   * cap Skript um Tasks auszuführen
   * capify Skript um capistrano zu initialisieren.
-
-!SLIDE
-# Funktionen
-  * Zugriff über ssh auf remote Servern
-  * verteilen der sourcen via SCP und/oder GIT/SVN...
-  * vorhalten meherer Versionen und Rollbacks
-  * Maintainence mode 
-  * rollenspezifische Task für Server
-  * Mehrere Enviroments (über Erweiterung)
 
 !SLIDE
 # Beste Practice: Deployment Enviroments
@@ -54,6 +54,7 @@ Framework das es erlaubt Tasks auf mehreren Systemen gleichzeitig auszuführen.
     role :db,  "your primary db-server here", :primary => true 
     role :db,  "your slave db-server here"
 
+    # Capistrano has hooks where you can execute scripts
     namespace :deploy do
       task :start do ; end
       task :stop do ; end

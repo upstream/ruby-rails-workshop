@@ -30,6 +30,9 @@ Kleiner Tachenrechner, der jeweils 2 Zahlen miteinander verrechnet:
 # Test
 
     @@@ ruby
+    require "rubygems"
+    gem "test-unit"
+    require "test/unit"
     class CalculatorTest < Test::Unit::TestCase
       def setup
         @calculator = Calculator.new

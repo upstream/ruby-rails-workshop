@@ -6,20 +6,34 @@ Funktioniert wie ein Controller nur das statt HTML Mails versendet werden
 # Mailer erstellen
   * `rails generate mailer NAME`
 
-!SLIDE
+<!SLIDE small>
 # Mail versenden
 
     @@@ ruby
     def welcome_email(user)
       @user = user
       @url  = "http://example.com/login"
-      attachment['filename']
+      attachment['file.pdf'] = File.new('path_to/file.pdf')
       mail(:to => user.email, :subject => "Welcome to My Awesome Site")
     end
     
     # Erwartet views/user_mailer/welcome_email.txt.erb
 
 !SLIDE
+# Mail view (welcome_email.txt.erb)
+
+    @@@ ruby
+    Hallo <%= @user.firstname %>
+
+    come sign in at <%= sign_in_url %>.
+  
+    <% if @user.age < 20 %>
+      Share this on facebook 
+    <% end %>
+
+# 
+
+<!SLIDE small>
 # Mailer konfigurieren (Bsp für Gmail)
 
     @@@ ruby

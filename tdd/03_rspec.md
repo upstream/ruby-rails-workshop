@@ -32,7 +32,6 @@
     .should be_a(String)
     .should have(3).items
 
-.notes NEXT: mocking bsps
 
 !SLIDE
 
@@ -43,7 +42,6 @@
     .should_receive(:calculate).with(anything)
     .should_receive(:calculate) {3}
 
-.notes NEXT: should raise_error
 
 !SLIDE
 
@@ -54,7 +52,6 @@
       ...
     }.should raise_error(RuntimeError)
 
-.notes NEXT: mocking bsp block
 
 !SLIDE
 
@@ -65,7 +62,6 @@
       arg1 == true
     end
 
-.notes NEXT: rspec-rails
 
 !SLIDE
 
@@ -81,7 +77,6 @@
         get :show, term: '3+3'
       end
 
-.notes NEXT: more code
 
 !SLIDE
 
@@ -96,8 +91,6 @@
         get :show, term: '3+3'
       end
 
-.notes NEXT: more code
-
 !SLIDE
 
     @@@ ruby
@@ -111,4 +104,3 @@
       end
     end
 
-.notes rendert keine views. NEXT: uebung
