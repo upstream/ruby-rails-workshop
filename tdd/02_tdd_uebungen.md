@@ -30,9 +30,7 @@ Kleiner Tachenrechner, der jeweils 2 Zahlen miteinander verrechnet:
 # Test
 
     @@@ ruby
-    require "rubygems"
-    gem "test-unit"
-    require "test/unit"
+    require 'minitest/unit'
     class CalculatorTest < Test::Unit::TestCase
       def setup
         @calculator = Calculator.new
@@ -42,8 +40,6 @@ Kleiner Tachenrechner, der jeweils 2 Zahlen miteinander verrechnet:
         assert_equal 4, @calculator.execute("2+2")
       end
     end
-
-.notes NEXT: implementation
 
 !SLIDE
 
@@ -58,8 +54,6 @@ Kleiner Tachenrechner, der jeweils 2 Zahlen miteinander verrechnet:
 
 Nur soweit implementieren wie nötig (= bis Tests grün).
 
-.notes NEXT: edge cases
-
 !SLIDE
 
 # Edge cases
@@ -69,27 +63,18 @@ Nur soweit implementieren wie nötig (= bis Tests grün).
     nil
     "1/0"
 
-.notes NEXT: mocking/stubbing
 
 !SLIDE
 
 # Mocking/Stubbing
 
-.notes NEXT: warum?
-
 !SLIDE
 
-# Warum?
-
-.notes NEXT: darum
-
-!SLIDE
+# Motivation
 
 * mehrere Komponenten, z.B. Rails - Controller, Views, Models
 * zusammen testen zu komplex: setup, zu langsam (z.B. Datenbank)
 * Komponenten ersetzen durch stubs
-
-.notes NEXT: mocking
 
 !SLIDE
 
@@ -138,8 +123,6 @@ Nur soweit implementieren wie nötig (= bis Tests grün).
 * zu langsam (bei 2000 Tests)
 * manche APIs kosten Geld (Payment-API)
 
-.notes NEXT: bsp.
-
 !SLIDE small
 
 # Beispiel mit Stubs
@@ -160,8 +143,6 @@ Nur soweit implementieren wie nötig (= bis Tests grün).
       end
     end
 
-.notes NEXT: vorteile
-
 !SLIDE
 
 # Vorteile
@@ -170,7 +151,6 @@ Nur soweit implementieren wie nötig (= bis Tests grün).
 * kein Netzwerk-Zugriff
 * zuverlässig
 
-.notes NEXT: nachteil
 
 !SLIDE
 
@@ -178,15 +158,11 @@ Nur soweit implementieren wie nötig (= bis Tests grün).
 
 * bekommt nicht mit, wenn sich Twitter-API oder `Connection` Objekt ändert.
 
-.notes NEXT: dependency injection
-
 !SLIDE
 
 # Dependency Injection
 
 Externe Komponenten ersetzen - wie?
-
-.notes NEXT: setter
 
 !SLIDE small
 
@@ -195,16 +171,12 @@ Externe Komponenten ersetzen - wie?
     @@@ ruby
     @object_under_test.dependency = stub(:dependency)
 
-.notes NEXT: constructor
-
 !SLIDE small
 
 # Constructor
 
     @@@ ruby
     MyObject.new stub(:dependency)
-
-.notes NEXT: dependency constructor
 
 !SLIDE small
 
@@ -221,8 +193,6 @@ Externe Komponenten ersetzen - wie?
 
 Sollte auch constructor-Argumente testen (mit mocks).
 
-.notes NEXT: variable injection
-
 !SLIDE small
 
 # Variable Injection
@@ -234,15 +204,11 @@ Sollte auch constructor-Argumente testen (mit mocks).
 
 Nachteil: Variablenname kann sich ändern.
 
-.notes NEXT: idealfall
-
 !SLIDE
 
 # Im Idealfall
 
 Code so schreiben, dass dependency injection über public interface möglich ist.
-
-.notes NEXT: übung
 
 !SLIDE
 
@@ -316,71 +282,6 @@ Klasse `AdvancedCalculator`, `Calculator` als dependency.
       end
     end
 
-.notes NEXT: zeit stubben
-
-!SLIDE
-
-# Zeit stubben
-
-.notes NEXT: timecop
-
-!SLIDE
-
-# Timecop
-
-    @@@ ruby
-    require 'timecop'
-    Timecop.travel 1984, 9, 30 do
-      ...
-    end
-
-.notes NEXT: Time.stub(:now)
-
-!SLIDE small
-
-# Stubs
-
-    @@@ ruby
-    current_time = Time.parse('1984-09-30 11:45:00')
-    Time.stubs(:now).returns(current_time)
-
-.notes NEXT: uebung wecker
-
-!SLIDE
-
-# Übung: Wecker
-
-Wecken um 8:30
-
-* heute wenn jetzt < 8:30
-* morgen wenn jetzt > 8:30
-
-.notes NEXT: code testcase
-
-!SLIDE
-
-    @@@ ruby
-    def test_alerts_me_today
-      now = Time.parse('...')
-      Time.stubs(:now).returns(now)
-      ...
-    end
-
-.notes NEXT: code testcase timecop
-
-!SLIDE
-
-    @@@ ruby
-    def test_alerts_me_today
-      Timecop.travel do 2010, 9, 30, 4, 30 do
-       ...
-      end
-    end
-
-.notes NEXT: refactoring
-
-!SLIDE
-
 # Refactoring
 
 .notes NEXT: definition von refactoring
@@ -389,25 +290,17 @@ Wecken um 8:30
 
 ## Code ändern, ohne seine Funktionen zu ändern.
 
-.notes NEXT: aufraeumen
-
 !SLIDE
 
 # Aufräumen.
-
-.notes NEXT: wartbarkeit
 
 !SLIDE
 
 # Wartbarkeit
 
-.notes NEXT: angst
-
 !SLIDE
 
 # Angst?!
-
-.notes NEXT: beispiele
 
 !SLIDE
 
@@ -416,36 +309,6 @@ Wecken um 8:30
 * Methoden aufteilen
 * `bundle update`
 
-.notes NEXT: ohne tests?
-
 !SLIDE
 
 # Ohne Tests? Srsly?
-
-.notes NEXT: unit tests
-
-!SLIDE
-
-# Unit Tests
-
-Refactorings innerhalb einer Klasse.
-
-.notes NEXT: integration tests
-
-!SLIDE
-
-# Integration Tests
-
-Größere Refactorings über Klassen hinweg.
-
-.notes NEXT: uebung
-
-!SLIDE
-
-# Übung: Refactoring
-
-Taschenrechner-Code.
-
-.notes NEXT: ende
-
-!SLIDE
