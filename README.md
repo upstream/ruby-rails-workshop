@@ -2,11 +2,12 @@
 
 Thilo Utke at [upstre.am](http://upstre.am) 2012
 
+This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/).
+
 ## Präsentation lokal starten
 
-  * per git clone lokal 
   * showoff installieren `gem install showoff`
-  * ins Source Code Verzeichniss wechslen `cd path_to_ruby-rails-workshop`
+  * ins Source Code Verzeichnis wechseln `cd path_to_ruby-rails-workshop`
   * show off starten `showoff serve`
   * wie angegeben Browser auf `http://localhost:9090` öffnen
 
@@ -41,7 +42,7 @@ Thilo Utke at [upstre.am](http://upstre.am) 2012
 ### Tools  
   
   * bundler, Dependency Manager - http://gembundler.com/
-  * Deployment Automatisierung mit Capistano - https://github.com/capistrano/capistrano/wiki/2.x-From-The-Beginning
+  * Deployment mit Capistano - https://github.com/capistrano/capistrano/wiki/2.x-From-The-Beginning
   * Povisioning automatisieren mit Chef (http://wiki.opscode.com/display/chef/Home) oder puppet http://puppetlabs.com/puppet/puppet-open-source/
   * Ruby Version Manager - RVM - http://rvm.io
   * RVM Alternative rb.env - https://github.com/sstephenson/rbenv
